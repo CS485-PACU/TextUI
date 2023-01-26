@@ -14,8 +14,8 @@
 //
 // Description: Set the input and output streams for the TextUI
 //
-// Parameters:  rcOut – the output stream
-//              rcIn – the input stream
+// Parameters:  rcOut - the output stream
+//              rcIn - the input stream
 //
 // Returned:    None
 //***************************************************************************
@@ -37,7 +37,7 @@ TextUI::~TextUI ()
 {
   for (auto &value : mWidgets)
   {
-    delete value.second;
+    // delete value.second;
   }
   mWidgets.clear ();
 }
@@ -114,7 +114,11 @@ void TextUI::drawScreen ()
 //***************************************************************************
 void TextUI::clearScreen () const
 {
-  system ("cls");
+#if defined(__linux__) || defined(__APPLE__)  
+  system ("clear"); // linux mac
+#else
+  system ("cls"); // windows
+  #endif
 }
 
 //***************************************************************************

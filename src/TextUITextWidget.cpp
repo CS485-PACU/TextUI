@@ -13,8 +13,8 @@
 //
 // Description: Initialize the label and data for the widget
 //
-// Parameters:  label – the widget's label
-//              data – the widget's data
+// Parameters:  label ï¿½ the widget's label
+//              data ï¿½ the widget's data
 //
 // Returned:    None
 //***************************************************************************
@@ -39,9 +39,10 @@ TextUITextWidget::TextUITextWidget (std::string label, std::string data)
 //***************************************************************************
 void TextUITextWidget::draw (std::ostream & rcOut) const
 {
+  const std::string MARKER = ": ";
   if (getLabel().length() > 0)
   {
-    rcOut << getLabel() << ": ";
+    rcOut << getLabel() << MARKER;
   }
   rcOut << getData();
 }
