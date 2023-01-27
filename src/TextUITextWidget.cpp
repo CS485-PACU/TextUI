@@ -13,8 +13,8 @@
 //
 // Description: Initialize the label and data for the widget
 //
-// Parameters:  label � the widget's label
-//              data � the widget's data
+// Parameters:  label - the widget's label
+//              data - the widget's data
 //
 // Returned:    None
 //***************************************************************************
